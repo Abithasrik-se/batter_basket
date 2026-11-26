@@ -1,0 +1,46 @@
+{
+  "act": {
+    "cancel": "Cancel",
+    "complete": "Mark delivered",
+    "confirm": "Confirm",
+    "dispatch": "Dispatch",
+    "pay": "Record payment",
+    "pause": "Pause",
+    "resume": "Resume",
+    "renew": "Renew"
+  },
+  "f": {
+    "address": "Delivery address",
+    "countedCash": "Counted cash",
+    "coupon": "Coupon code",
+    "days": "Delivery days",
+    "deliveryFee": "Delivery fee",
+    "difference": "Difference",
+    "end": "End date",
+    "expectedCash": "Expected cash",
+    "instructions": "Delivery instructions",
+    "invoice": "Invoice no.",
+    "items": "Items",
+    "method": "Payment method",
+    "number": "Order no.",
+    "outstanding": "Outstanding",
+    "paid": "Paid",
+    "payment": "Payment",
+    "plan": "Plan",
+    "reference": "UPI / bank reference",
+    "scheduled": "Delivery date",
+    "start": "Start date",
+    "tender": "Cash received from customer"
+  },
+  "method": {
+    "bank": "Bank transfer",
+    "cash": "Cash",
+    "upi": "UPI"
+  },
+  "new": "New order",
+  "plan": {
+    "annual": "Annual",
+    "monthly": "Monthly",
+    "weekly": "Weekly"
+  }
+}

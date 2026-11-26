@@ -1,0 +1,57 @@
+# Production-style stack: PostgreSQL, Redis, Django (gunicorn), Celery worker + beat, nginx serving the React build.
+# Usage: copy .env.production.example to .env.production, edit, then: docker compose --env-file .env.production up -d --build
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+
+  backend:
+    build: ./backend
+    restart: always
+    env_file: .env.production
+    environment: { DB_HOST: db, REDIS_URL: "redis://redis:6379/0" }
+    command: sh -c "python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 60"
+    volumes: [static:/app/staticfiles, media:/app/media]
+    depends_on:
+      db: { condition: service_healthy }
+
+  worker:
+    build: ./backend
+    restart: always
+    env_file: .env.production
+    environment: { DB_HOST: db, REDIS_URL: "redis://redis:6379/0" }
+    command: celery -A config worker -l info
+    depends_on: [backend, redis]
+
+  beat:
+    build: ./backend
+    restart: always
+    env_file: .env.production
+    environment: { DB_HOST: db, REDIS_URL: "redis://redis:6379/0" }
+    command: celery -A config beat -l info
+    depends_on: [backend, redis]
+
+  web:
+    build: ./frontend
+    restart: always
+    ports: ["127.0.0.1:8080:80"]   # host nginx/certbot terminates HTTPS and proxies here
+    volumes: [static:/srv/static:ro, media:/srv/media:ro]
+    depends_on: [backend]
+
+volumes:
+  pgdata:
+  static:
+  media:

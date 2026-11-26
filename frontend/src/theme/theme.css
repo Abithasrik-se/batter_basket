@@ -1,0 +1,38 @@
+/* ============================================================================
+   ZEAL ENTERPRISES: THE ONLY PLACE BRAND COLOURS ARE DEFINED
+   Colours are "R G B" triples so Tailwind can add opacity (bg-primary/10).
+   Change a value here (or via Settings -> theme in the app) and the whole app follows.
+   ========================================================================== */
+:root {
+  --color-primary: 11 11 11;               /* Zeal black */
+  --color-primary-foreground: 255 255 255;
+  --color-secondary: 243 240 232;          /* warm light grey */
+  --color-secondary-foreground: 20 20 20;
+  --color-accent: 201 151 28;              /* Zeal gold (approximate: sample from the logo file) */
+  --color-accent-foreground: 11 11 11;
+  --color-background: 250 249 246;
+  --color-surface: 255 255 255;
+  --color-border: 228 224 212;
+  --color-text: 20 20 20;
+  --color-muted: 107 105 98;
+  --color-success: 22 140 80;
+  --color-warning: 202 138 4;
+  --color-danger: 200 40 40;
+  --color-info: 37 99 180;
+  --radius: 8px;
+  --font-sans: "Inter", "Noto Sans Tamil", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-primary: 201 151 28;             /* gold becomes the action colour on dark */
+  --color-primary-foreground: 11 11 11;
+  --color-secondary: 38 36 32;
+  --color-secondary-foreground: 240 238 230;
+  --color-accent: 201 151 28;
+  --color-accent-foreground: 11 11 11;
+  --color-background: 14 14 13;
+  --color-surface: 24 23 21;
+  --color-border: 52 49 43;
+  --color-text: 240 238 230;
+  --color-muted: 160 156 146;
+}

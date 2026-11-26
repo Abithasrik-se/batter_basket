@@ -1,0 +1,17 @@
+{
+  "act": {
+    "package": "Package"
+  },
+  "f": {
+    "batch": "Batch no.",
+    "expiry": "Expiry",
+    "ingredients": "Ingredients",
+    "output": "Output (litres)",
+    "produced": "Quantity produced",
+    "quality": "Quality passed",
+    "recipe": "Recipe",
+    "units": "Number of packets",
+    "qualityNotes": "Quality notes"
+  },
+  "new": "New batch"
+}

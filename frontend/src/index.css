@@ -1,0 +1,43 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/noto-sans-tamil/400.css";
+@import "@fontsource/noto-sans-tamil/500.css";
+@import "@fontsource/noto-sans-tamil/600.css";
+@import "@fontsource/noto-sans-tamil/700.css";
+@import "leaflet/dist/leaflet.css";
+@import "./theme/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { @apply bg-background text-text font-sans antialiased; min-height: 100dvh; -webkit-tap-highlight-color: transparent; }
+  html[lang="ta"] body { line-height: 1.65; }  /* Tamil script needs more line height */
+  input, select, textarea { @apply bg-surface text-text; }
+  :focus-visible { @apply outline-none ring-2 ring-accent/60 ring-offset-1 ring-offset-background; }
+  h1 { @apply tracking-tight; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+}
+
+@layer components {
+  /* 16px on phones stops iOS from zooming into inputs; 44px minimum touch height */
+  .input { @apply min-h-[44px] w-full rounded-lg border border-border bg-surface px-3 py-2 text-base outline-none transition placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/25 sm:min-h-[40px] sm:text-sm disabled:opacity-60; }
+  .btn { @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 sm:min-h-[38px]; }
+  .btn-sm { @apply !min-h-[36px] !px-3 !py-1 text-xs; }
+  .btn-primary { @apply btn bg-primary text-primary-foreground shadow-sm hover:opacity-90; }
+  .btn-accent { @apply btn bg-accent text-accent-foreground shadow-sm hover:brightness-105; }
+  .btn-outline { @apply btn border border-border bg-surface text-text hover:bg-secondary; }
+  .btn-danger { @apply btn bg-danger text-white hover:opacity-90; }
+  .btn-ghost { @apply btn text-muted hover:bg-secondary hover:text-text; }
+  .card { @apply rounded-xl border border-border bg-surface p-4 shadow-[0_1px_2px_rgb(0_0_0/0.04),0_4px_14px_rgb(0_0_0/0.04)]; }
+  .th { @apply whitespace-nowrap px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-muted; }
+  .td { @apply px-4 py-3 text-sm; }
+  .skeleton { @apply animate-pulse rounded-md bg-secondary; }
+  .gold-line { background: linear-gradient(90deg, rgb(var(--color-accent)), rgb(var(--color-accent) / 0)); height: 2px; }
+}
+
+.leaflet-container { font-family: inherit; border-radius: 0.75rem; }

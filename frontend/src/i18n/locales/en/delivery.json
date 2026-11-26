@@ -1,0 +1,37 @@
+{
+  "act": {
+    "collect": "Collect payment",
+    "delivered": "Delivered",
+    "failed": "Not delivered"
+  },
+  "assign": "Assign delivery",
+  "consentText": "Your phone location will be shared with the business only while this duty session is on. Continue?",
+  "duty": "Duty session",
+  "dutyOff": "Location sharing is off",
+  "dutyOn": "Location is shared while this screen is open",
+  "endDuty": "End duty",
+  "startDuty": "Start duty",
+  "f": {
+    "confirmed": "Customer confirmed",
+    "employee": "Delivery employee",
+    "failReason": "Reason for failure",
+    "navigate": "Navigate",
+    "proof": "Proof / note",
+    "stop": "Stop"
+  },
+  "baseFee": "Base fee",
+  "maxKm": "Up to (km)",
+  "minKm": "From (km)",
+  "minOrders": "Orders in a day",
+  "newSlab": "New distance slab",
+  "newSurge": "New busy-day rule",
+  "perKm": "Extra per km",
+  "range": "Distance",
+  "slabs": "Distance charges",
+  "surcharge": "Surcharge",
+  "surge": "Busy-day surcharge",
+  "surgeType": "Surcharge type",
+  "surgeValue": "Amount or %",
+  "typeFlat": "Flat amount (₹)",
+  "typePercent": "Percent of delivery fee"
+}

@@ -1,0 +1,33 @@
+{
+  "act": {
+    "adjust": "Adjust",
+    "receive": "Receive stock",
+    "transfer": "Transfer"
+  },
+  "confirmReceive": "Receive this purchase into stock? This cannot be done twice.",
+  "f": {
+    "available": "Available",
+    "balance": "Balance",
+    "delta": "Change (+/-)",
+    "item": "Item",
+    "kind": "Stock kind",
+    "minStock": "Minimum stock",
+    "packaging": "Packaging material",
+    "reserved": "Reserved",
+    "supplier": "Supplier",
+    "toLocation": "Transfer to",
+    "unitCost": "Unit cost"
+  },
+  "kind": {
+    "bulk": "Bulk batter",
+    "packed": "Packaged",
+    "raw": "Raw material"
+  },
+  "newPurchase": "New purchase",
+  "move": {
+    "adjustment": "Correction (+/-)",
+    "wastage": "Wastage",
+    "expiry": "Expired",
+    "damage": "Damaged"
+  }
+}

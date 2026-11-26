@@ -1,0 +1,75 @@
+{
+  "act": {
+    "void": "Void"
+  },
+  "f": {
+    "action": "Action",
+    "area": "Area",
+    "baseUnit": "Base unit (litre / kg)",
+    "buy": "Buy",
+    "category": "Category",
+    "code": "Code",
+    "default": "Default",
+    "density": "Density (kg per litre)",
+    "discount": "Discount %",
+    "entity": "Record",
+    "free": "Free",
+    "from": "From",
+    "gst": "GST %",
+    "hourly": "Hourly rate",
+    "hsn": "HSN code",
+    "jobTitle": "Job title",
+    "joined": "Joining date",
+    "language": "Language",
+    "perCustomer": "Uses per customer",
+    "period": "Month",
+    "pincode": "Pincode",
+    "points": "Points",
+    "priceGroup": "Price group",
+    "role": "Role",
+    "salary": "Monthly salary",
+    "salaryType": "Pay type",
+    "size": "Size",
+    "to": "To",
+    "user": "User",
+    "username": "Username",
+    "void": "Void",
+    "factor": "Size in base unit",
+    "pin": "Map location"
+  },
+  "group": {
+    "bulk": "Bulk",
+    "hotel": "Hotel",
+    "household": "Household"
+  },
+  "salary": {
+    "hourly": "Hourly",
+    "monthly": "Monthly"
+  },
+  "type": {
+    "dosa": "Dosa batter",
+    "idli": "Idli batter",
+    "other": "Other"
+  },
+  "cat": {
+    "packaging": "Packaging",
+    "fuel": "Fuel",
+    "vehicle": "Vehicle maintenance",
+    "electricity": "Electricity",
+    "rent": "Rent",
+    "delivery": "Delivery",
+    "raw_material": "Raw material",
+    "other": "Other"
+  },
+  "pay": {
+    "salary": "Salary",
+    "advance": "Advance",
+    "bonus": "Bonus",
+    "deduction": "Deduction"
+  },
+  "kind": {
+    "count": "Count",
+    "volume": "Volume",
+    "weight": "Weight"
+  }
+}
