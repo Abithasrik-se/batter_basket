@@ -6,3 +6,4 @@ psycopg[binary]>=3.2
 Pillow>=11.3
 celery[redis]>=5.5
 segno>=1.6
+whitenoise>=6.9
